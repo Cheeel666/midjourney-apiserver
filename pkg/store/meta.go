@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/Cheeel666/midjourney-apiserver/pkg/api"
 	"github.com/bwmarrin/discordgo"
-	"midjourney-apiserver/pkg/api"
 )
 
 type MetaData struct {

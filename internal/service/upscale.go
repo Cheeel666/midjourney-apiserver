@@ -7,9 +7,9 @@ import (
 	"log"
 	"time"
 
+	"github.com/Cheeel666/midjourney-apiserver/pkg/api"
+	"github.com/Cheeel666/midjourney-apiserver/pkg/store"
 	"github.com/google/uuid"
-	"midjourney-apiserver/pkg/api"
-	"midjourney-apiserver/pkg/store"
 )
 
 /*

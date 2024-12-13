@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Cheeel666/midjourney-apiserver/internal/service"
+	"github.com/Cheeel666/midjourney-apiserver/pkg/store"
 	"github.com/bwmarrin/discordgo"
-	"midjourney-apiserver/internal/service"
-	"midjourney-apiserver/pkg/store"
 )
 
 func (app *Application) handleDescribeUpdateEvent(m *discordgo.MessageUpdate) {

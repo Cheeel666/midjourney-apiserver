@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/Cheeel666/midjourney-apiserver/pkg/api"
 	"github.com/bwmarrin/discordgo"
 	"github.com/google/uuid"
-	"midjourney-apiserver/pkg/api"
 )
 
 var (

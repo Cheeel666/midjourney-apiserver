@@ -8,14 +8,14 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/Cheeel666/midjourney-apiserver/internal/common"
+	"github.com/Cheeel666/midjourney-apiserver/internal/config"
+	"github.com/Cheeel666/midjourney-apiserver/internal/service"
+	"github.com/Cheeel666/midjourney-apiserver/pkg/api"
+	"github.com/Cheeel666/midjourney-apiserver/pkg/store"
 	"github.com/Cheeel666/midjourney-go/midjourney"
 	"github.com/bwmarrin/discordgo"
 	"google.golang.org/grpc"
-	"midjourney-apiserver/internal/common"
-	"midjourney-apiserver/internal/config"
-	"midjourney-apiserver/internal/service"
-	"midjourney-apiserver/pkg/api"
-	"midjourney-apiserver/pkg/store"
 )
 
 type Application struct {

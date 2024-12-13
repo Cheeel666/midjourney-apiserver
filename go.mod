@@ -1,4 +1,4 @@
-module midjourney-apiserver
+module github.com/Cheeel666/midjourney-apiserver
 
 go 1.23.3
 

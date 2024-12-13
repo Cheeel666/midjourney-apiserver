@@ -1,8 +1,8 @@
 package service
 
 import (
-	"midjourney-apiserver/internal/common"
-	"midjourney-apiserver/pkg/api"
+	"github.com/Cheeel666/midjourney-apiserver/internal/common"
+	"github.com/Cheeel666/midjourney-apiserver/pkg/api"
 )
 
 type Service struct {

@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Cheeel666/midjourney-apiserver/pkg/api"
 	"github.com/redis/go-redis/v9"
-	"midjourney-apiserver/pkg/api"
 )
 
 type Error struct {

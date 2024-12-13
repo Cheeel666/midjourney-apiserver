@@ -1,10 +1,10 @@
 package common
 
 import (
+	"github.com/Cheeel666/midjourney-apiserver/internal/config"
+	"github.com/Cheeel666/midjourney-apiserver/pkg/store"
 	"github.com/Cheeel666/midjourney-go/midjourney"
 	"github.com/bwmarrin/discordgo"
-	"midjourney-apiserver/internal/config"
-	"midjourney-apiserver/pkg/store"
 )
 
 type Base struct {
