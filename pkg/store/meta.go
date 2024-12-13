@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/api"
+	"midjourney-apiserver/pkg/api"
 )
 
 type MetaData struct {

@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/store"
-	wb "github.com/hongliang5316/midjourney-apiserver/pkg/webhook"
+	"midjourney-apiserver/pkg/store"
+	wb "midjourney-apiserver/pkg/webhook"
 )
 
 func (app *Application) messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {

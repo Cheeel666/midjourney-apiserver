@@ -3,13 +3,13 @@ package service
 import (
 	"context"
 	"fmt"
+	"github.com/Cheeel666/midjourney-go/midjourney"
 	"log"
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/api"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/store"
-	"github.com/hongliang5316/midjourney-go/midjourney"
+	"midjourney-apiserver/pkg/api"
+	"midjourney-apiserver/pkg/store"
 )
 
 /*
@@ -88,6 +88,7 @@ func (s *Service) Upscale(ctx context.Context, in *api.UpscaleRequest) (*api.Ups
 		ChannelID:   s.Config.Midjourney.ChannelID,
 		MessageID:   metaData.CompleteMessageID,
 		MessageHash: midjourney.GetMessageHash(url),
+		SessionID:   s.discordSessionID,
 	}); err != nil {
 		return &api.UpscaleResponse{
 			RequestId: in.RequestId,

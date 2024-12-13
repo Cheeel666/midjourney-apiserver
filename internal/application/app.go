@@ -8,14 +8,14 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/Cheeel666/midjourney-go/midjourney"
 	"github.com/bwmarrin/discordgo"
-	"github.com/hongliang5316/midjourney-apiserver/internal/common"
-	"github.com/hongliang5316/midjourney-apiserver/internal/config"
-	"github.com/hongliang5316/midjourney-apiserver/internal/service"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/api"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/store"
-	"github.com/hongliang5316/midjourney-go/midjourney"
 	"google.golang.org/grpc"
+	"midjourney-apiserver/internal/common"
+	"midjourney-apiserver/internal/config"
+	"midjourney-apiserver/internal/service"
+	"midjourney-apiserver/pkg/api"
+	"midjourney-apiserver/pkg/store"
 )
 
 type Application struct {
@@ -60,7 +60,7 @@ func (app *Application) Run() error {
 		}
 
 		s := grpc.NewServer()
-		api.RegisterAPIServiceServer(s, service.New(app.Base))
+		api.RegisterAPIServiceServer(s, service.New(app.Base, app.Config.Midjourney.DiscordSessionID))
 
 		if err := s.Serve(lis); err != nil {
 			log.Fatal(err)

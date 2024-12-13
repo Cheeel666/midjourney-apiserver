@@ -3,13 +3,13 @@ package service
 import (
 	"context"
 	"fmt"
+	"github.com/Cheeel666/midjourney-go/midjourney"
 	"log"
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/api"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/store"
-	"github.com/hongliang5316/midjourney-go/midjourney"
+	"midjourney-apiserver/pkg/api"
+	"midjourney-apiserver/pkg/store"
 )
 
 /*
@@ -51,6 +51,7 @@ func (s *Service) Imagine(ctx context.Context, in *api.ImagineRequest) (*api.Ima
 		GuildID:   s.Config.Midjourney.GuildID,
 		ChannelID: s.Config.Midjourney.ChannelID,
 		Prompt:    in.Prompt,
+		SessionID: s.discordSessionID,
 	}); err != nil {
 		return &api.ImagineResponse{
 			RequestId: in.RequestId,

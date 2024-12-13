@@ -110,7 +110,7 @@ mkdir -p /your/app/conf
 
 cd /your/app
 
-# configure conf.yml, please see ./conf/conf.yml.example
+# configure conf.yml, please see ./conf/conf.yml
 vim conf/conf.yml
 
 # create docker-compose.yml
@@ -153,7 +153,7 @@ cd /your/app
 
 cp `go env GOROOT`/bin/midjourney-apiserver .
 mkdir conf
-# configure conf.yml, please see ./conf/conf.yml.example
+# configure conf.yml, please see ./conf/conf.yml
 vim conf/conf.yml
 # run
 ./midjourney-apiserver

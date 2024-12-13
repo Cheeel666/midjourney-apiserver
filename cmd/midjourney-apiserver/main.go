@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/hongliang5316/midjourney-apiserver/internal/application"
+	"midjourney-apiserver/internal/application"
 )
 
 func main() {

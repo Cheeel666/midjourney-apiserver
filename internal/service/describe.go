@@ -3,14 +3,14 @@ package service
 import (
 	"context"
 	"fmt"
+	"github.com/Cheeel666/midjourney-go/midjourney"
 	"strings"
 	"sync"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/google/uuid"
-	"github.com/hongliang5316/midjourney-apiserver/pkg/api"
-	"github.com/hongliang5316/midjourney-go/midjourney"
+	"midjourney-apiserver/pkg/api"
 )
 
 var (
@@ -44,6 +44,7 @@ func (s *Service) Describe(ctx context.Context, in *api.DescribeRequest) (*api.D
 		GuildID:   s.Config.Midjourney.GuildID,
 		ChannelID: s.Config.Midjourney.ChannelID,
 		ImageURL:  in.ImageUrl,
+		SessionID: s.discordSessionID,
 	}); err != nil {
 		return &api.DescribeResponse{
 			RequestId: in.RequestId,

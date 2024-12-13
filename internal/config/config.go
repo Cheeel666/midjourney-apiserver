@@ -14,9 +14,10 @@ type Config struct {
 }
 
 type Midjourney struct {
-	UserToken string `yaml:"user_token"`
-	GuildID   string `yaml:"guild_id"`
-	ChannelID string `yaml:"channel_id"`
+	UserToken        string `yaml:"user_token"`
+	GuildID          string `yaml:"guild_id"`
+	ChannelID        string `yaml:"channel_id"`
+	DiscordSessionID string `yaml:"discord_session_id"`
 }
 
 type Redis struct {

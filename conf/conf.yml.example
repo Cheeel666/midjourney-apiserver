@@ -1,4 +1,4 @@
-listen_port:
+clisten_port: 8082
 
 midjourney:
   user_token:
